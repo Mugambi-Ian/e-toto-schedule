@@ -52,84 +52,86 @@ export default class Schedule extends Component {
               Description
             </p>
           </div>
-          {this.state.schedule.map((x, i) => {
-            return (
-              <div className="row" key={i}>
-                <p className="num unselectable">{i + 1}</p>
-                <input
-                  onChange={async (e) => {
-                    x.numOfDays = parseInt(e.target.value);
-                    const g = this.state.updatedSchedule;
-                    const r = g[i];
-                    r.numOfDays = x.numOfDays;
-                    g[i] = r;
-                    this.setState({ updatedSchedule: g, updated: true });
-                  }}
-                  value={x.numOfDays}
-                  name={"Code"}
-                  placeholder={"Number Of Days"}
-                />
-                <input
-                  onChange={async (e) => {
-                    x.vaccineCode = e.target.value;
-                    const g = this.state.updatedSchedule;
-                    const r = g[i];
-                    r.vaccineCode = x.vaccineCode;
-                    g[i] = r;
-                    this.setState({ updatedSchedule: g, updated: true });
-                  }}
-                  value={x.vaccineCode}
-                  name={"Code"}
-                  placeholder={"Vaccine Code"}
-                />
-                <input
-                  onChange={async (e) => {
-                    x.vaccineName = e.target.value;
-                    const g = this.state.updatedSchedule;
-                    const r = g[i];
-                    r.vaccineName = x.vaccineName;
-                    g[i] = r;
-                    this.setState({ updatedSchedule: g, updated: true });
-                  }}
-                  value={x.vaccineName}
-                  name={"Vaccine"}
-                  placeholder={"Vaccine Name"}
-                />
-                <input
-                  onChange={async (e) => {
-                    x.description = e.target.value;
-                    const g = this.state.updatedSchedule;
-                    const r = g[i];
-                    r.description = x.description;
-                    g[i] = r;
-                    this.setState({ updatedSchedule: g, updated: true });
-                  }}
-                  value={x.description}
-                  name={"description"}
-                  placeholder={"Description"}
-                />
-                <div
-                  className="delete"
-                  onClick={async () => {
-                    await setTimeout(async () => {
-                      await _database
-                        .ref("schedule")
-                        .child(x.vaccineId)
-                        .set(null);
-                    }, 100);
-                  }}
-                >
-                  <img
-                    className="unselectable"
-                    alt=""
-                    src={
-                      require("../../../assets/drawables/delete.png").default
-                    }
+          <div className="content">
+            {this.state.schedule.map((x, i) => {
+              return (
+                <div className="row" key={i}>
+                  <p className="num unselectable">{i + 1}</p>
+                  <input
+                    onChange={async (e) => {
+                      x.numOfDays = parseInt(e.target.value);
+                      const g = this.state.updatedSchedule;
+                      const r = g[i];
+                      r.numOfDays = x.numOfDays;
+                      g[i] = r;
+                      this.setState({ updatedSchedule: g, updated: true });
+                    }}
+                    value={x.numOfDays}
+                    name={"Code"}
+                    placeholder={"Number Of Days"}
                   />
+                  <input
+                    onChange={async (e) => {
+                      x.vaccineCode = e.target.value;
+                      const g = this.state.updatedSchedule;
+                      const r = g[i];
+                      r.vaccineCode = x.vaccineCode;
+                      g[i] = r;
+                      this.setState({ updatedSchedule: g, updated: true });
+                    }}
+                    value={x.vaccineCode}
+                    name={"Code"}
+                    placeholder={"Vaccine Code"}
+                  />
+                  <input
+                    onChange={async (e) => {
+                      x.vaccineName = e.target.value;
+                      const g = this.state.updatedSchedule;
+                      const r = g[i];
+                      r.vaccineName = x.vaccineName;
+                      g[i] = r;
+                      this.setState({ updatedSchedule: g, updated: true });
+                    }}
+                    value={x.vaccineName}
+                    name={"Vaccine"}
+                    placeholder={"Vaccine Name"}
+                  />
+                  <input
+                    onChange={async (e) => {
+                      x.description = e.target.value;
+                      const g = this.state.updatedSchedule;
+                      const r = g[i];
+                      r.description = x.description;
+                      g[i] = r;
+                      this.setState({ updatedSchedule: g, updated: true });
+                    }}
+                    value={x.description}
+                    name={"description"}
+                    placeholder={"Description"}
+                  />
+                  <div
+                    className="delete"
+                    onClick={async () => {
+                      await setTimeout(async () => {
+                        await _database
+                          .ref("schedule")
+                          .child(x.vaccineId)
+                          .set(null);
+                      }, 100);
+                    }}
+                  >
+                    <img
+                      className="unselectable"
+                      alt=""
+                      src={
+                        require("../../../assets/drawables/delete.png").default
+                      }
+                    />
+                  </div>
                 </div>
-              </div>
-            );
-          })}
+              );
+            })}
+          </div>
         </div>
         <div className="options">
           <p

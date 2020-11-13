@@ -9,9 +9,14 @@
 .schedule-body .sheet {
   display: flex;
   flex-direction: column;
-  align-self: center;
+  align-self: center; max-height: 50%;
 }
-
+.sheet .content {
+  display: flex;
+  flex-direction: column;
+ 
+  overflow-y: auto;
+}
 .sheet .row {
   display: flex;
   max-width: 600px;
