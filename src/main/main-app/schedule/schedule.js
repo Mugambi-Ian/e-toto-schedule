@@ -48,7 +48,9 @@ export default class Schedule extends Component {
             <p className="unselectable">Number of Days</p>
             <p className="unselectable">Vaccine Code</p>
             <p className="unselectable">Vaccine Name</p>
-            <p className="unselectable"></p>
+            <p className="unselectable" style={{ flex: "2" }}>
+              Description
+            </p>
           </div>
           {this.state.schedule.map((x, i) => {
             return (
@@ -93,6 +95,19 @@ export default class Schedule extends Component {
                   name={"Vaccine"}
                   placeholder={"Vaccine Name"}
                 />
+                <input
+                  onChange={async (e) => {
+                    x.description = e.target.value;
+                    const g = this.state.updatedSchedule;
+                    const r = g[i];
+                    r.description = x.description;
+                    g[i] = r;
+                    this.setState({ updatedSchedule: g, updated: true });
+                  }}
+                  value={x.description}
+                  name={"description"}
+                  placeholder={"Description"}
+                />
                 <div
                   className="delete"
                   onClick={async () => {
@@ -127,6 +142,7 @@ export default class Schedule extends Component {
                   vaccineName: "",
                   numOfDays: 0,
                   vaccineCode: "",
+                  description: "",
                 };
                 const u = this.state.updatedSchedule;
                 u.push(z);
