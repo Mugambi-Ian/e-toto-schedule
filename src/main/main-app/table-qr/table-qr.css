@@ -1,0 +1,22 @@
+.qr-body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+}
+.qr-body p {
+  text-align: center;
+  color: #0c6b99;
+  font-weight: 500;
+  padding: 0;
+  margin: 0;
+  font-size: 30px;
+  margin: 10px;
+}
+.qr-body .code {
+  height: 70%;
+  align-self: center;
+  object-fit: contain;
+  animation: fade-in ease-in 0.5s;
+}

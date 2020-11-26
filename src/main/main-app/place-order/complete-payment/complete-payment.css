@@ -1,0 +1,180 @@
+.payment-body {
+  flex: 1;
+  display: flex;
+  animation: fade-in ease-in 0.3s;
+  margin-top: 10px;
+  transition: all 0.3s linear;
+  justify-content: center;
+}
+
+.payment-options {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  animation: fade-in ease-in 0.3s;
+  transition: all 0.3s linear;
+}
+
+.payment-options-btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #fff;
+  padding: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  transition: all 0.3s linear;
+}
+
+.payment-options-btn img {
+  width: 100px;
+  align-self: center;
+  object-fit: contain;
+  margin: 10px;
+}
+
+.payment-options-btn p {
+  font-weight: 700;
+  color: #747474;
+  align-self: center;
+  margin: 0;
+  padding-bottom: 20px;
+  font-size: 20px;
+}
+
+.payment-options-btn:active {
+  animation: lift ease-in 0.2s;
+}
+
+.place-order-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  animation: fade-in ease-in 0.3s;
+  transition: all 0.3s linear;
+  min-height: 88vh;
+}
+
+.order-complete-body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  animation: highlight ease-in 0.3s;
+  transition: all 0.3s linear;
+  min-height: 88vh;
+  justify-content: center;
+}
+
+.order-complete-body img {
+  width: 150px;
+  align-self: center;
+  object-fit: contain;
+  margin: 20px;
+}
+.order-complete-body p {
+  font-weight: 300;
+  color: #747474;
+  align-self: center;
+  margin: 0;
+  padding-bottom: 20px;
+  font-size: 25px;
+}
+
+.Form {
+  animation: fade 200ms ease-out;
+}
+
+.FormGroup {
+  padding: 0;
+  border-style: none;
+  background-color: #ffffff;
+  will-change: opacity, transform;
+  box-shadow: 1px 6px 9px rgba(50, 50, 93, 0.06),
+    1px 2px 5px rgba(0, 0, 0, 0.08), inset 1px 1px 1px #ffffff;
+  border-radius: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.FormRow {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-left: 15px;
+  border-top: 1px solid #819efc;
+}
+
+.FormRow:first-child {
+  border-top: none;
+}
+
+.FormRowLabel {
+  width: 15%;
+  min-width: 70px;
+  padding: 11px 0;
+  color: #c4f0ff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@keyframes void-animation-out {
+  0%,
+  to {
+    opacity: 1;
+  }
+}
+.FormRowInput:-webkit-autofill {
+  -webkit-text-fill-color: #fce883;
+  /* Hack to hide the default webkit autofill */
+  transition: background-color 100000000s;
+  animation: 1ms void-animation-out;
+}
+
+.FormRowInput {
+  font-size: 16px;
+  width: 100%;
+  padding: 11px 15px 11px 0;
+  color: #fff;
+  background-color: transparent;
+  animation: 1ms void-animation-out;
+}
+
+.FormRowInput::placeholder {
+  color: #fff;
+}
+
+.StripeElement--webkit-autofill {
+  background: transparent !important;
+}
+
+.StripeElement {
+  width: 100%;
+  padding: 11px 15px 11px 0;
+}
+
+.btn-pay {
+  background-color: #747474;
+  border-radius: 10px;
+  font-family: "Quicksand";
+  text-transform: capitalize;
+  padding: 10px;
+  font-weight: 500;
+  max-width: 150px;
+  text-align: center;
+  color: #fff;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: all 0.5s linear;
+}
+.btn-pay:active {
+  animation: lift ease-in 0.2s;
+}
+.card-payment-body {
+  align-self: center;
+  color: #fff;
+}
+

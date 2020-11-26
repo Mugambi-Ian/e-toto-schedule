@@ -1,0 +1,212 @@
+.app-body {
+  background-color: #000;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  animation: fade-in ease-in 0.3s;
+}
+.app-body .app-title {
+  margin: 0;
+  padding: 0;
+  flex: 0;
+  color: #fff;
+  margin-top: 10px;
+  font-size: 22px;
+  font-weight: 700;
+  margin-left: 20px;
+}
+
+.app-body .content {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  flex: 1;
+  margin-top: 20px;
+}
+.app-body .app-control {
+  position: fixed;
+  right: 10px;
+  top: 7px;
+  display: flex;
+  flex-direction: row;
+}
+
+.app-control .control-btn {
+  border: #fff 2px solid;
+  padding: 5px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  margin-left: 10px;
+  transition: all 0.2s linear;
+}
+.control-btn img {
+  width: 25px;
+  object-fit: contain;
+  align-self: center;
+}
+
+.control-btn:active {
+  animation: lift ease-in-out 0.2s;
+}
+.menu-body p.title {
+  color: #fff;
+  margin: 0;
+  font-weight: 300;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 20px;
+}
+
+.menu-body .cat-nav-bar {
+  display: flex;
+  overflow-x: auto;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.cat-nav-bar .cat-nav-btn {
+  min-width: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: -0px -0px 1px 3px rgba(126, 126, 126, 0.311);
+  background-color: #fff;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  transition: all 0.3s linear;
+}
+.cat-nav-bar .cat-nav-btn.selected {
+  background-color: #747474;
+}
+.cat-nav-bar .cat-nav-btn.selected p {
+  color: #fff;
+}
+.cat-nav-btn img {
+  width: 50px;
+  object-fit: contain;
+  align-self: center;
+  margin-top: 5px;
+}
+.cat-nav-btn p {
+  margin: 0;
+  align-self: center;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-align: center;
+  font-weight: 700;
+}
+.cat-nav-btn:active {
+  animation: lift 0.2s ease-in;
+}
+.cat-menu-items {
+  display: flex;
+  overflow-y: auto;
+  width: 100vw;
+  background-color: #000;
+  flex-wrap: wrap;
+  animation: slide-up 0.3s ease-in;
+}
+
+.cat-menu-items::-webkit-scrollbar {
+  width: 0.1rem;
+}
+
+.cat-menu-items::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+.cat-menu-items::-webkit-scrollbar-thumb {
+  background: #000;
+}
+
+.menu-item {
+  background-color: #c0c0c0;
+  display: flex;
+  flex-direction: column;
+  color: #747474;
+  justify-content: center;
+  animation: fade-in ease-in 0.3s;
+  transition: all 0.3s linear;
+  width: 100vw;
+  height: max-content;
+}
+.menu-item img {
+  width: 100vw;
+  min-height: 250px;
+  max-height: 300px;
+  object-fit: fill;
+  margin-bottom: 10px;
+}
+.menu-item p {
+  margin: 0;
+  padding: 0;
+  margin-left: 20px;
+  margin-bottom: 5px;
+}
+.menu-item h4 {
+  margin: 0;
+  margin-left: 20px;
+  font-size: 22px;
+  font-weight: 500;
+  color: #747474;
+  margin-bottom: 20px;
+}
+
+.menu-item:active {
+  box-shadow: 0 0 0 0 #00000000;
+  animation: lift 0.2s ease-in;
+  transform: translateY(-3%);
+  transform: scale(0.95);
+}
+
+.menu-item:active h4 {
+  color: #fff;
+}
+@media only screen and (min-height: 600px) {
+  .cat-menu-items {
+    height: 55vh;
+  }
+}
+@media only screen and (max-height: 700px) {
+  .cat-menu-items {
+    height: 58vh;
+  }
+}
+@media only screen and (min-height: 700px) {
+  .cat-menu-items {
+    height: 60vh;
+  }
+}
+@media only screen and (min-height: 800px) {
+  .cat-menu-items {
+    height: 70vh;
+  }
+}
+
+.menu-body .menu-options {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.floating-btn {
+  padding: 10px;
+  background-color: #ffffff;
+  
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.floating-btn img {
+  width: 35px;
+  object-fit: contain;
+}
+
+.floating-btn:active {
+  animation: fade-in ease-in 0.2s;
+}

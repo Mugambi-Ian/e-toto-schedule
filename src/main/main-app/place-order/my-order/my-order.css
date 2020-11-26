@@ -1,0 +1,101 @@
+.order-body {
+  flex: 1;
+  max-height: 80vh;
+  overflow-y: auto;
+  display: flex;
+  margin-top: 10px;
+  animation: slide-up ease-in 0.3s;
+  transition: all 0.3s linear;
+  min-height: 80vh;
+  flex-direction: column;
+}
+
+.order-item {
+  display: flex;
+
+  background-color: #747474;
+  flex-direction: column;
+  height: max-content;
+}
+
+.order-item p {
+  flex: 1;
+  color: #fff;
+  font-weight: 600;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+.order-item p.btn {
+  flex: 0;
+  margin: 0;
+  background-color: #fff;
+  color: #747474;
+  min-width: 50px;
+  font-weight: 700;
+  font-size: 25px;
+  align-self: center;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+p.btn.minus {
+  padding-right: 3px;
+  color: red;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 100px;
+}
+p.btn.plus {
+  padding-left: 3px;
+  border-bottom-right-radius: 10px;
+  border-top-left-radius: 100px;
+}
+
+.order-item img {
+  border-radius: 100px;
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  object-fit: fill;
+  align-self: center;
+}
+
+p.btn:active {
+  animation: lift ease-in 0.2s;
+}
+
+.footer {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: 60px;
+  background-color: #fff;
+  display: flex;
+  animation: fade-in ease-in 0.3s;
+  transition: all 0.3s linear;
+}
+.footer p {
+  margin: 0;
+  padding: 0;
+  align-self: center;
+  margin-left: 20px;
+  flex: 1;
+  color: #747474;
+  font-weight: 500;
+}
+.footer p.btn {
+  background-color: #747474;
+  border-radius: 5px;
+  margin: 10px;
+  align-self: center;
+  flex: 0;
+  color: #fff;
+  min-width: 120px;
+  text-align: center;
+  font-weight: 700;
+  padding: 7px;
+}
